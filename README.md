@@ -10,4 +10,4 @@ This project went relatively quickly. Considering that I waited until the last m
 What's really pathetic is that I had extra time to work on this project (two weeks instead of one) and I didn't take
 advantage of it. During that time, I *did* move from one city to another, and started a new job, but that was only part 
 of the problem. Simply put, I procrastinated. This could have been a real disaster. However, after watching the lecture
-twice and doing some supplemental research, I felt I had a good grasp of the concepts that were presented.
+twice and doing some supplemental research, I was well prepared for the task at hand.
