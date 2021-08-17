@@ -183,4 +183,51 @@ public class Homework7 {
             System.out.println(heap.extract());
         }
     }
+
+    public static class Driver {
+
+
+        public static void main(String[] args) {
+            Person[] theNextPerson = new Person[9];
+            theNextPerson[0] = new Homework7.Person("Karsten", 25, 74);
+            theNextPerson[1] = new Homework7.Person("Dalilah", 31, 68);
+            theNextPerson[2] = new Homework7.Person("Andre", 26, 70);
+            theNextPerson[3] = new Homework7.Person("Mary", 66, 68);
+            theNextPerson[4] = new Homework7.Person("Grant", 23, 74);
+            theNextPerson[5] = new Homework7.Person("Simone", 24, 56);
+            theNextPerson[6] = new Homework7.Person("Gabrielle", 24, 70);
+            theNextPerson[7] = new Homework7.Person("Kathryn", 30, 68);
+            theNextPerson[8] = new Homework7.Person("Femke", 21, 72);
+            System.out.println("\n… sorted by name:\n");
+            outputSorted(theNextPerson,
+                    new Comparator<>() {
+                        @Override
+                        public int compare(Homework7.Person thisPerson, Homework7.Person thatPerson) {
+                            return thatPerson.getName().compareTo(thisPerson.getName());
+                        }
+                    });
+            System.out.println("\n… sorted by age:\n");
+            outputSorted(theNextPerson,
+                    new Comparator<>() {
+                        @Override
+                        public int compare(Homework7.Person thisPerson, Homework7.Person thatPerson) {
+                            return thatPerson.getAge() - thisPerson.getAge();
+                        }
+                    });
+            System.out.println("\n… sorted by height:\n");
+            outputSorted(theNextPerson,
+                    new Comparator<>() {
+                        @Override
+                        public int compare(Person thisPerson, Person thatPerson) {
+                            if (thisPerson.getHeight() < thatPerson.getHeight()) {
+                                return 1;
+                            } else if (thisPerson.getHeight() > thatPerson.getHeight()) {
+                                return -1;
+                            }
+                            return 0;
+                        }
+                    });
+        }
+    }
+
 }

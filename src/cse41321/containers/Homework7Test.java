@@ -46,8 +46,8 @@ public class Homework7Test {
 
     @org.testng.annotations.BeforeMethod
     public void setUp() {
-        // Initialize the Person array
         System.setOut(new PrintStream(this.consoleContent));
+        // Initialize the Person array
         people[0] = new Homework7.Person("Karsten", 25, 74);
         people[1] = new Homework7.Person("Dalilah", 31, 68);
         people[2] = new Homework7.Person("Mary", 66, 68);
@@ -65,7 +65,12 @@ public class Homework7Test {
 
     @Test
     public void outputSortedByNameAscending() {
-        Homework7.outputSorted(people, (p1, p2) -> p2.getName().compareTo(p1.getName()));
+        Homework7.outputSorted(people, new Comparator<Homework7.Person>() {
+            @Override
+            public int compare(Homework7.Person p1, Homework7.Person p2) {
+                return p2.getName().compareTo(p1.getName());
+            }
+        });
         assertTrue(this.consoleContent.toString().contains(alphabeticalOrderByName));
     }
 
