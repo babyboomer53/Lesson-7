@@ -5,9 +5,9 @@ import java.util.Comparator;
 public class Homework7 {
 
     static class Person {
-        String name;
-        int age;
-        double height;
+        private String name;
+        private int age;
+        private double height;
 
         public Person(String name, int age, double height) {
             this.name = name;
@@ -52,7 +52,7 @@ public class Homework7 {
     public static class Heap<E> {
         Object[] tree;  // Left-balanced binary tree
 
-        private Comparator<? super E> comparator;
+        private final Comparator<? super E> comparator;
 
         public Heap(Comparator<? super E> comparator) {
             this.comparator = comparator;

@@ -65,37 +65,40 @@ public class Homework7Test {
 
     @Test
     public void outputSortedByNameAscending() {
-        Homework7.outputSorted(people, new Comparator<Homework7.Person>() {
-            @Override
-            public int compare(Homework7.Person p1, Homework7.Person p2) {
-                return p2.getName().compareTo(p1.getName());
-            }
-        });
+        Homework7.outputSorted(people,
+                new Comparator<Homework7.Person>() {
+                    @Override
+                    public int compare(Homework7.Person p1, Homework7.Person p2) {
+                        return p2.getName().compareTo(p1.getName());
+                    }
+                });
         assertTrue(this.consoleContent.toString().contains(alphabeticalOrderByName));
     }
 
     @Test
     public void outputSortedByAgeAscending() {
-        Homework7.outputSorted(people, new Comparator<>() {
-            public int compare(Homework7.Person p1, Homework7.Person p2) {
-                return p2.getAge() - p1.getAge();
-            }
-        });
+        Homework7.outputSorted(people,
+                new Comparator<>() {
+                    public int compare(Homework7.Person p1, Homework7.Person p2) {
+                        return p2.getAge() - p1.getAge();
+                    }
+                });
         assertTrue(this.consoleContent.toString().contains(ascendingOrderByAge));
     }
 
     @Test
     public void outputSortedByHeightAscending() {
-        Homework7.outputSorted(people, new Comparator<>() {
-            public int compare(Homework7.Person p1, Homework7.Person p2) {
-                if (p1.getHeight() < p2.getHeight()) {
-                    return 1;
-                } else if (p1.getHeight() > p2.getHeight()) {
-                    return -1;
-                }
-                return 0;
-            }
-        });
+        Homework7.outputSorted(people,
+                new Comparator<>() {
+                    public int compare(Homework7.Person p1, Homework7.Person p2) {
+                        if (p1.getHeight() < p2.getHeight()) {
+                            return 1;
+                        } else if (p1.getHeight() > p2.getHeight()) {
+                            return -1;
+                        }
+                        return 0;
+                    }
+                });
         assertTrue(this.consoleContent.toString().contains(ascendingOrderByHeight));
     }
 }
