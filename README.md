@@ -18,10 +18,9 @@ The *outputSorted* method expects two arguments; an array of **Person** objects,
 ```java
     outputSorted(Person[] person, Comparator<Person> comparator)
 ```
-It will use the
-**Comparator** parameter to insert the **Person** objects into a **Heap** in the prescribed order. Then it extracts the
-**Person** objects from the **Heap** and lists them on the console. The original array of **Person** objects is not 
-modified.
+It uses the **Comparator** parameter to insert the **Person** objects into a **Heap** in the prescribed order. Then 
+it extracts the **Person** objects from the **Heap** and lists them on the console. The original array of **Person** 
+objects is not modified.
 
 The _outputSorted_ method must be able to display the contents of an array of **Person** objects in order by _name_, 
 _age_ or _height_.
@@ -585,3 +584,13 @@ What's really pathetic is that I had extra time to work on this project (two wee
 advantage of it. During that time, I *did* move from one city to another, and started a new job, but those are just
 excuses. Simply put, I procrastinated. This could have been a real disaster. However, after watching the lecture
 twice and doing some supplemental research, I found the assignment fairly intuitive.
+
+As usual, this assignment was compelling. I'm always surprised by the ways in which the structures and algorithms we are
+studying can be applied. And then there are the fringe benefits. This time around I got to use an anonymous inner
+class. I've heard of them, probably even seen them, but never have I used them. I used to wonder what those curly braces
+were doing inside parentheses?! 😕 It just didn't look right! Now that I've seen a few of them, I'll probably never stop
+using them! 🙂
+
+Well here I am again,  up against the clock. I can't believe it! I forget how long it takes to prepare this document.
+Sometimes it takes as much time to prepare this document as it does to write the program. Regardless, I think it's a
+worthwhile exercise.
